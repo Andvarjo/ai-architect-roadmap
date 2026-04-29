@@ -14,12 +14,15 @@
 - Watched the LangChain "Introduction to LangGraph" intro and wrote 5 takeaways in `/notes/langgraph-intro.md`. _(filled in at end of session)_
 
 ### What clicked
-_(fill in after the video)_
+Día 1 fue todo plumbing — repo, README con TOC de 26 semanas, estructura de carpetas, commit inicial. La claridad de ver el plan completo mapeado a un repo público hace que los próximos 6 meses se sientan concretos, no abstractos.
 
 ### What didn't / open questions
-_(fill in after the video)_
+- El video de LangGraph quedó pendiente — rolea a mañana.
+- Push pendiente desde la terminal local (el sandbox no tiene SSH keys, intencional).
 
 ### Tomorrow
-- Tutorial: build a basic chatbot in LangGraph → `/week-01-langgraph-basics/01-basic-chatbot.py`.
+- `git push -u origin main` (1 min) → repo público vivo en GitHub.
+- Intro video LangGraph + 5 notas en `/notes/langgraph-intro.md` (30 min).
+- Tutorial: basic chatbot en LangGraph → `01-basic-chatbot.py` (90 min).
 
 ---

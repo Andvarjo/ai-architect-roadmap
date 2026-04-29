@@ -45,3 +45,9 @@ Thumbs.db
 .langgraph/
 checkpoints/
 traces/
+
+# External reference material (cloned course repos, sample projects, etc.)
+# Lives locally for study; not part of public portfolio.
+**/lca-langgraph-essentials/
+**/_external/
+_reference/

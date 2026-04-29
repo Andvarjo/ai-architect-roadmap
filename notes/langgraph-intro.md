@@ -1,3 +1,21 @@
+# LangGraph Essentials (Python) — course notes
+
+**Course:** [LangGraph Essentials — Python](https://academy.langchain.com/courses/take/langgraph-essentials-python/lessons/69419153-introduction) (LangChain Academy)
+**Date:** 2026-04-28 (Week 1, Day 2)
+**Reference repo (kept local, not in this repo):** `langchain-ai/lca-langgraph-essentials`
+
+## Lessons covered
+
+| # | Lesson | Concept |
+|---|---|---|
+| L1 | Nodes | State as TypedDict / dataclass / Pydantic; nodes as pure functions |
+| L2 | Edges | Reducers + parallel execution via `Annotated[..., operator.add]` |
+| L3-L4 | Conditional edges + memory | `InMemorySaver`, `thread_id`, persisted state across invocations |
+| L5 | Interrupt | Native `interrupt()` for human-in-the-loop, paired with checkpointer |
+| L6 | Email Agent (project) | Intent classification + conditional routing + HITL approval |
+
+---
+
 ## Takeaways 1
 
 - State: All nodes share the same [state](#state_definition) which can be a Python TypedDict, dataclass, or a Pydantic BaseModel
@@ -31,24 +49,4 @@ Result:
 
 Setup:
 
-- [InMemorySaver and `thread_id` config](#memory_setup) enable state persistence across invocations
-- Pass the [checkpointer to compile()](#graph_with_memory) to enable memory
-
-Execution:
-
-- Each [invoke with the same `thread_id`](#l4_execution) accesses the same persisted state
-- State accumulates across multiple invocations within the same thread
-- Different `thread_id`s maintain separate conversation histories
-
-## Takeaways 5
-
-Setup:
-
-- [Node_a uses `interrupt()`](#interrupt_node) to pause execution when unexpected input occurs
-- [Checkpointer enables interrupts](#l5_memory) by saving state between pause and resume
-
-Execution:
-
-- When interrupt is called, the [graph pauses](#l5_execution) and waits for human input
-- The admin response determines whether to continue execution or end
-- Graph state is preserved during the pause and restored when resuming
+- [
